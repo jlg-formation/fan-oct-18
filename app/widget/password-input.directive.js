@@ -4,6 +4,7 @@
     angular.module('widget')
         .directive(`orsPasswordInput`, function () {
             return {
+                scope: {},
                 templateUrl: `./widget/tmpl/ors-password-input.html`,
                 controller: ['$element', function OrsPasswordInputCtrl($element) {
                     console.log('OrsPasswordInputCtrl start', $element);
