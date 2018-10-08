@@ -3,10 +3,15 @@
 
     var app = angular.module('main', []);
 
-    app.directive('orsHeader', function() {
-        return {
-            templateUrl: './tmpl/ors-header.html'
-        };
+    ['Header', 'Body', 'Footer'].forEach(label => {
+        app.directive(`ors${label}`, function() {
+            return {
+                templateUrl: `./tmpl/ors-${label.toLowerCase()}.html`
+            };
+        });
     });
+    
+   
+  
 
 })();
