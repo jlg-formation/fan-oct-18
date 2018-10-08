@@ -1,17 +1,12 @@
 (function() {
     'use strict';
 
-    var app = angular.module('main', []);
+    var app = angular.module('main', ['layout']);
 
-    ['Header', 'Body', 'Footer'].forEach(label => {
-        app.directive(`ors${label}`, function() {
-            return {
-                templateUrl: `./tmpl/ors-${label.toLowerCase()}.html`
-            };
-        });
+    app.directive(`orsMain`, function() {
+        return {
+            templateUrl: `./ors-main.html`
+        };
     });
-    
-   
-  
 
 })();
