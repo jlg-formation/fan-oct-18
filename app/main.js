@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module('main', ['layout']);
+    const app = angular.module('main', ['layout']);
 
     app.directive(`orsMain`, function () {
         return {

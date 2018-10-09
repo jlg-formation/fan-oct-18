@@ -9,10 +9,15 @@
   "author": "Jean-Louis GUENEGO",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "angular": "^1.7.5",
+    "babel-loader": "^8.0.4",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "serve-index": "^1.9.1"
+    "serve-index": "^1.9.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }
