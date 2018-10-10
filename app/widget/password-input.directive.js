@@ -1,3 +1,5 @@
+import './css/ors-password-input.css';
+
 
 export const passwordInput = function () {
     return {
