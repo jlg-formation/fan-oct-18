@@ -9,7 +9,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'app/wpk')
     },
-    mode: 'production',
+    mode: 'development',
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
