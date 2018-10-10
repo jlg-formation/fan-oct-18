@@ -3,7 +3,8 @@ export const passwordInput = function () {
     return {
         scope: {},
         templateUrl: `./widget/tmpl/ors-password-input.html`,
-        controller: ['$element', function OrsPasswordInputCtrl($element) {
+        controller: function OrsPasswordInputCtrl($element) {
+            'ngInject';
             console.log('OrsPasswordInputCtrl start', $element);
             this.state = 'hidden';
             this.password = '';
@@ -24,7 +25,7 @@ export const passwordInput = function () {
                 }
 
             }
-        }],
+        },
         controllerAs: '$ctrl',
     };
 }

@@ -6,7 +6,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'app/wpk')
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
             {
@@ -15,7 +15,8 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env'],
+                        plugins: ['angularjs-annotate']
                     }
                 }
             }
