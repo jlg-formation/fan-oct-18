@@ -5,16 +5,8 @@
         <td>Description</td>
         <td>Note</td>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>GUENEGO</td>
-        <td>coucou</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>DURAND</td>
-        <td>hello</td>
-        <td>15</td>
+    <tr ng-repeat="record in $ctrl.data">
+        <td ng-repeat="name in $ctrl.names">{{record[name]}}</td>
+        
     </tr>
 </table>
