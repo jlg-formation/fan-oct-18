@@ -1,17 +1,12 @@
-(function() {
-    'use strict';
+import '../widget/widget.module';
 
-    var app = angular.module('layout', ['widget']);
+const app = angular.module('layout', ['widget']);
 
-    ['Header', 'Body', 'Footer'].forEach(label => {
-        app.directive(`ors${label}`, function() {
-            return {
-                templateUrl: `./layout/tmpl/ors-${label.toLowerCase()}.html`
-            };
-        });
+['Header', 'Body', 'Footer'].forEach(label => {
+    app.directive(`ors${label}`, function() {
+        return {
+            templateUrl: `./layout/tmpl/ors-${label.toLowerCase()}.html`
+        };
     });
-    
-   
-  
+});
 
-})();
