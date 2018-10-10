@@ -8,6 +8,7 @@ export const table = {
             { id: 2, name: 'DURAND', description: 'coucou', note: 15},
         ];
         this.names = ['id', 'name', 'description', 'note'];
+        this.labels = ['ID', 'Name', 'Description', 'Note'];
     }
 };
 

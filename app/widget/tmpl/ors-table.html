@@ -1,12 +1,8 @@
 <table>
     <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Note</td>
+        <th ng-repeat="label in $ctrl.labels">{{label}}</th>
     </tr>
     <tr ng-repeat="record in $ctrl.data">
-        <td ng-repeat="name in $ctrl.names">{{record[name]}}</td>
-        
+        <td ng-repeat="name in $ctrl.names">{{record[name]}}</td>  
     </tr>
 </table>
