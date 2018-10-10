@@ -1,4 +1,5 @@
-<table>
+<h1>Title: {{$ctrl.myTitle}}</h1>
+<table ng-click="$ctrl.onClick()">
     <tr>
         <th ng-repeat="label in $ctrl.labels">{{label}}</th>
     </tr>
@@ -6,3 +7,4 @@
         <td ng-repeat="name in $ctrl.names">{{record[name]}}</td>  
     </tr>
 </table>
+<input ng-model="$ctrl.color">

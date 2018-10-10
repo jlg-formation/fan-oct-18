@@ -22,6 +22,10 @@ app.directive(`orsBody`, function () {
                 this.labels = ['ID', 'Name', 'Description', 'Note'];
                 this.names = ['id', 'name', 'description', 'note'];
                 console.log(this.myRecords);
+                this.myColor = 'red';
+                this.doSomeThing = () => {
+                    alert('coucou');
+                }
             }
         },
         controllerAs: '$ctrl',

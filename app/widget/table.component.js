@@ -4,13 +4,16 @@ export const table = {
         console.log('orsTable start');
         
         this.$onInit = () => {
-            console.log('ngInit', this.records);
+            console.log('ngInit', this.data);
         }
     },
     bindings: {
         data: '<records',
         labels: '<',
         names: '<',
+        myTitle: '@',
+        color: '=', // pas recommandé.
+        onClick: "&"
     }
 };
 
