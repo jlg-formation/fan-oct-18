@@ -1,5 +1,5 @@
 import { passwordInput } from './password-input.directive';
-import { table } from './table.directive';
+import { table } from './table.component';
 angular.module('widget', [])
     .directive('orsPasswordInput', passwordInput)
-    .directive('orsTable', table)
+    .component('orsTable', table)
