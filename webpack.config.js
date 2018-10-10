@@ -1,5 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
     entry: './app/main.js',
@@ -8,6 +10,16 @@ module.exports = {
         path: path.resolve(__dirname, 'app/wpk')
     },
     mode: 'production',
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true // set to true if you want JS source maps
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
     module: {
         rules: [
             {
@@ -85,4 +97,16 @@ module.exports = {
             filename: "bundle.css",
         })
     ],
+    stats: {
+        warningsFilter: function (str) {
+            console.log('XXX', arguments);
+            if (str.match(/asset size limit/)) {
+                return true;
+            }
+            if (str.match(/webpack performance recommendations/)) {
+                return true;
+            }
+            return false;
+        }
+    }
 };
