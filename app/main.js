@@ -1,12 +1,10 @@
-(function () {
-    'use strict';
+import 'angular';
 
-    const app = angular.module('main', ['layout']);
+const app = angular.module('main', ['layout']);
 
-    app.directive(`orsMain`, function () {
-        return {
-            templateUrl: `./ors-main.html`
-        };
-    });
+app.directive(`orsMain`, function () {
+    return {
+        templateUrl: `./ors-main.html`
+    };
+});
 
-})();
